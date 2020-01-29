@@ -1,0 +1,116 @@
+/* restores the default bootstrap padding to .container-fluid */
+.container-fluid { padding: 0 15px; }
+
+/* reset the styles for the #footer element */
+#footer { position: initial; bottom: initial; width: initial; height: initial; background-color: initial; }
+
+/* Hide the default h1 from display */
+.search-page-header { display: none; }
+
+/* get rid of padding on main container, EJP2 doesn't use bootstrap grid properly */
+body > .container-fluid {
+  padding: 0;
+}
+
+/* hack some responsiveness into EJP2 */
+div[ui-view="titleSearch"],
+div[ui-view="searchOpenClose"],
+#search-controls,
+div[ui-view="searchResults"]
+{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  div[ui-view="searchOpenClose"],
+  #search-controls,
+  div[ui-view="searchResults"]
+  {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  div[ui-view="searchOpenClose"],
+  #search-controls,
+  div[ui-view="searchResults"]
+  {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  div[ui-view="searchOpenClose"],
+  #search-controls,
+  div[ui-view="searchResults"]
+  {
+    width: 1170px;
+  }
+}
+
+/* special styles for ui-view="titleSearch" */
+div[ui-view="titleSearch"] { background: #FFF; padding: 15px; }
+@media (min-width: 768px) {
+  div[ui-view="titleSearch"] { width: 720px; }
+}
+@media (min-width: 992px) {
+  div[ui-view="titleSearch"] { width: 940px; }
+}
+@media (min-width: 1200px) {
+  div[ui-view="titleSearch"] { width: 1140px; }
+}
+
+/* remove extra top margin above heading elements */
+div[ui-view="titleSearch"] h2 { 
+  margin-top: 0; 
+}
+
+/* remove extra margin around #search-controls */
+#search-controls { margin-top: 0; margin-bottom: 0; }
+
+/* really? */
+.search-hr { display: none; }
+.results-hr { display: none; }
+
+/* remove padding above search results ("Showing results ...") */
+.results-details { padding: 0; }
+
+/* remove ridiculous amount of padding in search results */
+.results-title-row { padding-top: 0; }
+
+/* fix ugly search results display */
+.results-title-row { padding: 15px 0; }
+.results-title-row + .results-title-row { border-top: 1px solid lightblue; }
+.results-title-image { max-width: 100%; margin: 0; }
+.results-title-details { border-top: none; padding-top: 0; }
+@media (min-width: 992px) {
+  .results-title-details.col-md-7 { width: 83.33333333%; }
+}
+.results-db-name { display: block; }
+.results-db-separator { display: none; }
+
+/* prevent random spacing if image doesn't exist, or is tiny. */
+.results-title-image {
+  display: block;
+}
+
+/* remove ridiculous amount of margin-top above the bottom pagination */
+#results-pagination-bottom { margin-top: 20px; }
+
+
+/* Force the RyLib footer to be at the bottom and make the "Last Updated on" font smaller*/
+#footer {
+  display: flex;
+  flex-direction: column;
+}
+
+#footer .update-date-footer-container {
+  order: 1;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+#footer .footer-regular {
+  order: 2;
+}
