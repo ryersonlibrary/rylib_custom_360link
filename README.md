@@ -1,4 +1,4 @@
-# rylib_360link_custom - v0.0.1
+# rylib_custom_360link - v0.0.1
 
 Visual and functional tweaks to 360Link (EJP2.0, Link2.0) by Ryerson University Library.
 
