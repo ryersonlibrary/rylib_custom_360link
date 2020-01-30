@@ -42,7 +42,6 @@ jQuery(document).ready(function() {
 
   var buildChatBoxHtml = function(iframeSrc) {
     var html = '';
-    html += '<h3 style="text-align:left">Chat with a Librarian!</h3>';
     html += '<iframe frameborder="0" style="width:100%;height:350px;min-height:350px;resize:vertical;" src="' + iframeSrc + '"></iframe>';
     return html;
   };
