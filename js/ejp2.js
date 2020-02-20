@@ -93,3 +93,11 @@ const callback2 = function(mutationsList, observer) {
 }
 const observer2 = new MutationObserver(callback2);
 observer2.observe(targetNode2, config2);
+
+_$(document).ready(function() {
+  if (window.location.hash.includes("searchType=title_code")){
+    var hidesearch = document.createElement("style");
+    hidesearch.innerHTML = "span.results-details-line-2 { display: none; }";
+    document.head.appendChild(hidesearch);
+  }
+});
